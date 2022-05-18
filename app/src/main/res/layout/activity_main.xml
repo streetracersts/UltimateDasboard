@@ -7,49 +7,57 @@
     android:background="#1C1818"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/wallpapersden_com_futuristic_sci_fi_hud_5120x2880"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
     <TextView
         android:id="@+id/editTextNumber2"
-        android:layout_width="0dp"
-        android:layout_height="172dp"
-        android:layout_marginEnd="268dp"
+        android:layout_width="255dp"
+        android:layout_height="156dp"
+        android:layout_marginEnd="244dp"
+        android:background="#E62A1D3A"
         android:ems="10"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="0"
         android:textAlignment="viewEnd"
-        android:textColor="#03A9F4"
+        android:textColor="#DDC4E1"
         android:textSize="150sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
 
     <TextClock
         android:id="@+id/txtHora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="52dp"
+        android:background="#E62A1D3A"
         android:ems="10"
+        android:fontFamily="sans-serif-smallcaps"
         android:format12Hour="dd/M/yyyy"
         android:hint="@string/app_name"
         android:inputType="date"
         android:minHeight="48dp"
         android:textAlignment="center"
-        android:textColor="#2196F3"
+        android:textColor="#DDC4E1"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="0dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:contentDescription="@string/bottom_sheet_behavior"
-        app:layout_constraintEnd_toStartOf="@+id/editTextNumber2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextNumber2"
-        app:srcCompat="@android:drawable/stat_sys_headset" />
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_dialog_dialer"
+        tools:layout_editor_absoluteX="216dp"
+        tools:layout_editor_absoluteY="324dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
