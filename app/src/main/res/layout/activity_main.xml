@@ -17,9 +17,9 @@
 
     <TextView
         android:id="@+id/editTextNumber2"
-        android:layout_width="255dp"
-        android:layout_height="156dp"
-        android:layout_marginEnd="244dp"
+        android:layout_width="267dp"
+        android:layout_height="167dp"
+        android:layout_marginEnd="232dp"
         android:background="#E62A1D3A"
         android:ems="10"
         android:fontFamily="sans-serif-smallcaps"
@@ -29,14 +29,13 @@
         android:textSize="150sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextClock
         android:id="@+id/txtHora"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_width="260dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="36dp"
         android:background="#E62A1D3A"
         android:ems="10"
         android:fontFamily="sans-serif-smallcaps"
@@ -48,7 +47,7 @@
         android:textColor="#DDC4E1"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
