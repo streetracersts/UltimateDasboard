@@ -32,6 +32,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextClock
+        android:id="@+id/txtData"
+        android:layout_width="260dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="36dp"
+        android:background="#E62A1D3A"
+        android:ems="10"
+        android:fontFamily="sans-serif-smallcaps"
+        android:format12Hour="dd/M/yyyy"
+        android:hint="@string/app_name"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textColor="#DDC4E1"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+        
+    <TextClock
         android:id="@+id/txtHora"
         android:layout_width="260dp"
         android:layout_height="53dp"
