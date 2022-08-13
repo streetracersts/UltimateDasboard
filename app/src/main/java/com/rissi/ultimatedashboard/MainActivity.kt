@@ -3,25 +3,21 @@ package com.rissi.ultimatedashboard
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextClock
 import android.widget.TextView
-
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
 
 class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) 
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE
-        val txtHora = findViewById<TextClock>(R.id.txtHora)
-            txtHora.text
-         val txtDatw = findViewById<textClock>(R.id.txtData)
-             txtData.text
-         val velocidade = findViewById<textEdit>(R.id.txtVelocidade)
-         velocidade = 88
-    }
-      private fun showSystemUI() {
-        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
+        val current = LocalDateTime.now()
+       val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
+        val formatted = current.format(formatter)
+        val velocidade = findViewById<TextView>(R.id.txtVelocidade)
+         velocidade.text = 88.toString();
+        val DataAtual = findViewById<TextView>(R.id.txtData)
+        DataAtual.text = formatted
     }
 }

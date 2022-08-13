@@ -7,6 +7,7 @@
     android:background="#1C1818"
     tools:context=".MainActivity">
 
+
     <ImageView
         android:id="@+id/imgBG"
         android:layout_width="wrap_content"
@@ -14,79 +15,82 @@
         app:srcCompat="@drawable/wallpapersden_com_futuristic_sci_fi_hud_5120x2880"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
-        
-        
-  <ImageView
+
+    <ImageView
         android:id="@+id/imgCapaDisco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/inage.jpg"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
-        
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu_foreground" />
+
     <TextView
         android:id="@+id/txtVelocidade"
-        android:layout_width="267dp"
-        android:layout_height="167dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="232dp"
         android:layout_marginEnd="232dp"
         android:background="#E62A1D3A"
         android:ems="10"
         android:fontFamily="sans-serif-smallcaps"
         android:text="0"
-        android:textAlignment="viewEnd"
+        android:textAlignment="textEnd"
         android:textColor="#DDC4E1"
         android:textSize="200sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextClock
+    <TextView
         android:id="@+id/txtData"
-        android:layout_width="260dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginStart="245dp"
+        android:layout_marginEnd="246dp"
         android:background="#E62A1D3A"
         android:ems="10"
         android:fontFamily="sans-serif-smallcaps"
-        android:format12Hour="dd/M/yyyy"
+
         android:hint="@string/app_name"
-        android:inputType="date"
         android:minHeight="48dp"
         android:textAlignment="center"
         android:textColor="#DDC4E1"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-        
+        app:layout_constraintEnd_toEndOf="@+id/imgBG"
+        app:layout_constraintStart_toStartOf="@+id/imgBG"
+        app:layout_constraintTop_toBottomOf="@+id/txtHora" />
+
     <TextClock
         android:id="@+id/txtHora"
-        android:layout_width="260dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="268dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="231dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="232dp"
         android:background="#E62A1D3A"
         android:ems="10"
         android:fontFamily="sans-serif-smallcaps"
-        android:format24Hour="Hh:mm"
+        android:format24Hour="HH:mm"
         android:hint="@string/app_name"
         android:inputType="date"
         android:minHeight="48dp"
         android:textAlignment="center"
         android:textColor="#DDC4E1"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/imgBG"
+        app:layout_constraintStart_toStartOf="@+id/imgBG"
+        app:layout_constraintTop_toTopOf="@+id/imgBG" />
 
     <ImageButton
         android:id="@+id/btnMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@android:drawable/ic_dialog_dialer"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="324dp" />
+        tools:layout_editor_absoluteX="245dp"
+        tools:layout_editor_absoluteY="360dp" />
 
     <ImageButton
         android:id="@+id/imageButton2"
