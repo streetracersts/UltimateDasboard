@@ -13,11 +13,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val current = LocalDateTime.now()
-       val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
+        val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
         val formatted = current.format(formatter)
         val velocidade = findViewById<TextView>(R.id.txtVelocidade)
-         velocidade.text = 88.toString();
-        val DataAtual = findViewById<TextView>(R.id.txtData)
-        DataAtual.text = formatted
+         velocidade.text = 88.toString()
+        val dataAtual = findViewById<TextView>(R.id.txtData)
+        dataAtual.text = formatted
     }
 }

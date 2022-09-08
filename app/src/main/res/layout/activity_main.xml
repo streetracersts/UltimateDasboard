@@ -12,9 +12,12 @@
         android:id="@+id/imgBG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/wallpapersden_com_futuristic_sci_fi_hud_5120x2880"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wallpapersden_com_futuristic_sci_fi_hud_5120x2880" />
 
     <ImageView
         android:id="@+id/imgCapaDisco"
@@ -88,16 +91,27 @@
         android:id="@+id/btnMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_dialog_dialer"
-        tools:layout_editor_absoluteX="245dp"
-        tools:layout_editor_absoluteY="360dp" />
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="900dp"
+        android:layout_marginBottom="320dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_dialer" />
 
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_btn_speak_now"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="335dp" />
+        android:layout_marginTop="257dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginBottom="345dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgBG"
+        app:layout_constraintTop_toBottomOf="@+id/txtData"
+        app:srcCompat="@android:drawable/ic_btn_speak_now" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
