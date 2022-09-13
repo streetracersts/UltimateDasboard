@@ -10,8 +10,15 @@ import androidx.core.view.WindowInsetsControllerCompat
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
+//import android.location.Location;
+import android.location.LocationListener;
+//import android.location.LocationManager;
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() implements LocationListener {
+    LocationManager lm = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+    lm.requestLocationUpdates(Location
+    .GPS_PROVIDER, 0, 0, this);
+    this.onLocationCahnged(null);
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,10 +26,18 @@ class MainActivity : AppCompatActivity() {
         val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
         val formatted = current.format(formatter)
         val velocidade = findViewById<TextView>(R.id.txtVelocidade)
-         velocidade.text = 88.toString()
+         velocidade.text = 88//.location.getSpeed().toString
         val dataAtual = findViewById<TextView>(R.id.txtData)
         dataAtual.text = formatted
         hideSystemBars();
+    }
+    public void onLocationCahnged(Location location){
+        if (location==null){
+            velocidade.text = "0 km/h";
+        }else{
+            int speed = (int) ((location.getSpeed()*3600)/1000));
+            velocidade.text = speed+" km/h";
+        }
     }
     private fun hideSystemBars() {
         val windowInsetsController = ViewCompat.getWindowInsetsController(window.decorView) ?: return
